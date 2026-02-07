@@ -10,8 +10,8 @@ export default function HowItWorks() {
 
   return (
     <section ref={ref} className="relative py-32 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-black"></div>
+      {/* Background - transparent to show waves */}
+      <div className="absolute inset-0 bg-transparent"></div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div

@@ -6,11 +6,11 @@ import Image from 'next/image';
 export default function Footer() {
   return (
     <footer className="relative py-16 border-t border-[#e6edf3]/10 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-black"></div>
+      {/* Background - transparent to show waves */}
+      <div className="absolute inset-0 bg-transparent"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-2 gap-12">
           {/* Left: Logo & Tagline */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -34,59 +34,11 @@ export default function Footer() {
             </div>
           </motion.div>
 
-          {/* Middle: Quick Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: true }}
-          >
-            <h4 className="text-lg font-bold text-[#e6edf3] mb-4">Resources</h4>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <a
-                  href="https://github.com/syns-dev"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#e6edf3]/70 hover:text-[#3ddc97] transition-colors"
-                >
-                  → GitHub
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/docs"
-                  className="text-[#e6edf3]/70 hover:text-[#3ddc97] transition-colors"
-                >
-                  → Documentation
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/requirements"
-                  className="text-[#e6edf3]/70 hover:text-[#3ddc97] transition-colors"
-                >
-                  → Abstract Requirements
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://discord.gg/syns"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#e6edf3]/70 hover:text-[#3ddc97] transition-colors"
-                >
-                  → Discord Community
-                </a>
-              </li>
-            </ul>
-          </motion.div>
-
           {/* Right: Install */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
             <h4 className="text-lg font-bold text-[#e6edf3] mb-4">Get Started</h4>
@@ -102,7 +54,7 @@ export default function Footer() {
               </button>
             </div>
             <p className="text-[#e6edf3]/50 text-xs mt-4">
-              Requires Node.js 18+ or Python 3.9+
+              Requires Node.js 18+ and Python 3.9+
             </p>
           </motion.div>
         </div>
